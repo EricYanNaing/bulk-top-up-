@@ -1,0 +1,631 @@
+<!doctype html>
+<div class="loader-container" style="z-index: 2000">
+    <div class="lds-ripple"><div></div><div></div></div>
+</div>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="en" http-equiv="Content-Language">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>OK$ Transfer</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"
+        name="viewport" />
+    <meta content="This is an example dashboard created using build-in elements and components." name="description">
+    <meta content="no" name="msapplication-tap-highlight">
+
+    <!--    *** Multiselect Css ***-->
+    <link href="../assets/vendor/multiselect/assets/jquery.multiselect.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/multiselect/assets/jquery.multiselect.filter.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/multiselect/assets/style.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/multiselect/assets/prettify.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/multiselect/assets/jquery-ui.css" rel="stylesheet" type="text/css">
+
+    <!--    *** Bootstrap ***-->
+    <link href="../assets/vendor/bootstrap-5.1.3-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+    <!--    *** Intl' Phone Css ***-->
+    <link rel="stylesheet" href="../assets/vendor/intl_phonenumber/css/intlTelInput.css">
+
+    <!--*** Check all ***-->
+    <!--    <link rel="stylesheet" href="../assets/vendor/multiselect-checkall/bootstrap-multiselect.css">-->
+
+    <!--    *** Calendar Css ***-->
+    <link rel="stylesheet" href="../assets/vendor/calendar/calentim.min.css">
+
+    <!--    *** Data Table ***-->
+    <link rel="stylesheet" href="../assets/vendor/data_table/data_table.css">
+
+    <!--*** 4.user role css ***-->
+    <link rel="stylesheet" href="css/style.css">
+
+<body>
+
+    <!--                *** Scroll Bar *** -->
+    <div class="scrollbar-container"></div>
+    <!--        *** Scroll Bar ***-->
+
+
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+        <div class="app-header header-shadow">
+            <div class="app-header__logo">
+                <a href="../index.html" class="d-flex align-items-center text-decoration-none">
+                    <div class="logo-src"></div>
+                    <span class="fw-bolder logo-text text-white">BULK TOP UP</span>
+                </a>
+                <div class="header__pane ml-auto">
+                    <div>
+                        <button id="closebtn" class="hamburger close-sidebar-btn hamburger--elastic"
+                            data-class="closed-sidebar" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button class="hamburger hamburger--elastic mobile-toggle-nav" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="app-main">
+            <div class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="logo-src"></div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar"
+                                type="button">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button class="hamburger hamburger--elastic mobile-toggle-nav" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                        <button id="close-btn"
+                            class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav"
+                            type="button">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
+                    </span>
+                </div>
+                <div class="scrollbar-sidebar">
+                    <div class="app-sidebar__inner">
+                        <div class="user-info">
+                            <div class=" d-flex flex-column align-items-center pt-3">
+                                <img src="../assets/images/profile-pic.jpg" alt="" class="profile-pic">
+                                <a href="../11.Profile/11_profile.html"><p class="pt-2 text-white fw-bold">BULK TOP UP ADMIN</p></a>
+                                <p class="text-white fw-bold">Last Login</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="text-white">
+                                    <i class="fa fa-calendar-alt"></i>
+                                    <span>Wed, 01-Feb-2022</span>
+                                </div>
+                                <div class="text-white">
+                                    <i class="fa fa-clock"></i>
+                                    <span>04:50</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="vertical-nav-menu pt-3 text-white">
+                            <li class="py-1">
+                                <a href="../index.html">
+                                    <img src="../assets/images/icons/Dashboard.svg" alt="">
+                                    <span class="px-2">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">
+                                    <img src="../assets/images/icons/Master.svg" alt="">
+                                    <span class="px-2">User Role Master</span>
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li class="py-1">
+                                        <a href="../4.User_role_master/4.1_company.html">
+                                            <img src="../assets/images/icons/Company.svg" alt="">
+                                            <span class="px-2">Company</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../4.User_role_master/4.4_department.html">
+                                            <img src="../assets/images/icons/Department.svg" alt="">
+                                            <span class="px-2">Department</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../4.User_role_master/4.7_designation.html">
+                                            <img src="../assets/images/icons/Designation.svg" alt="">
+                                            <span class="px-2">Designation</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1">
+                                <a href="5.1.main_menu.html" class="mm-active">
+                                    <img src="../assets/images/icons/User%20Role%20Permission.svg" alt="">
+                                    <span class="px-2">User Role Permission</span>
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#" class=""  id="telecomsub">
+                                    <img src="../assets/images/icons/Telecom%20Master.svg" alt="">
+                                    <span class="px-2">Telecom Masters</span>
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li class="py-1">
+                                        <a href="../7.Telecom/7.1Telecom.html" class="" >
+                                            <img src="../assets/images/icons/Telecom.svg" alt="">
+                                            <span class="px-2">Telecom</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../7.Telecom/7.2TelecomService.html">
+                                            <img src="../assets/images/icons/Telecom%20Service%20Type.svg" alt="">
+                                            <span class="px-2">Telecom Service Type</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../7.Telecom/7.3ServiceConfiguration.html">
+                                            <img src="../assets/images/icons/Service%20Type%20Configuration.svg" alt="">
+                                            <span class="px-2">Service Type Configuration</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../7.Telecom/7.4TelecomPrice.html">
+                                            <img src="../assets/images/icons/Telecom%20Price.svg" alt="">
+                                            <span class="px-2">Telecom Price</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1 ">
+                                <a href="#">
+                                    <img src="../assets/images/icons/Process.svg" alt="">
+                                    <span class="px-2">Process</span>
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li class="py-1">
+                                        <a href="../6.Process/6.1a_single_topup_listing.html" >
+                                            <img src="../assets/images/icons/Single%20Top%20Up.svg" alt="">
+                                            <span class="px-2">Single Top Up</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../6.Process/6.2_multiple_topup_listing.html">
+                                            <img src="../assets/images/icons/Multiple%20Top%20Up.svg" alt="">
+                                            <span class="px-2">Multiple Top Up</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../6.Process/6.4_bulk_top_up_listing.html">
+                                            <img src="../assets/images/icons/Bulk%20Top%20Up.svg" alt="">
+                                            <span class="px-2">Bulk Top Up</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1 ">
+                                <a class="">
+                                    <img src="../assets/images/icons/Report.svg" alt="">
+                                    <span class="px-2">Report</span>
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li class="py-1">
+                                        <a href="../8.report/8.1.report-details.html" class="">
+                                            <img src="../assets/images/icons/Clipboard.svg" alt="">
+                                            <span class="px-2">Report Detail</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../8.report/8.3.transaction-by-date.html" >
+                                            <img src="../assets/images/icons/Transaction Detail By Date.svg" alt="">
+                                            <span class="px-2">Transaction Detail By Date</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1">
+                                <a href="../9.Change_pswrd/9.1_change_pswrd.html">
+                                    <img src="../assets/images/icons/Change%20Password.svg" alt="">
+                                    <span class="px-2">Change Password</span>
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#" aria-expanded="false" data-toggle="modal" data-target="#logoutFormModal">
+                                    <img src="../assets/images/icons/Logout.svg" alt="">
+                                    <span class="px-2">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--            *** Content Start ***-->
+
+            <div class="app-main__outer">
+                <div class="app-main__inner">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="fw-bold user-role-title">Create User Role Permission</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row py-2">
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+                                    <div class="mb-3 upload-profile">
+                                        <p class="">Upload Profile Image</p>
+                                        <input id="file-upload" class="form-control bg-light" type="file"
+                                            data-text="Select Your File" value="profile-img.png" accept="image/jpeg" />
+                                        <label for="file-upload" class="custom-file-upload">
+                                            <a id="upload-lightbox" data-fslightbox="gallery"
+                                                href="../images/Icon/beautiful-woman-avatar-character-icon-free-vector.jpg">
+                                                <img class="upload-photo-logo" src="../assets/images/upload.png"
+                                                    id="uploaded-photo" alt="">
+                                            </a>
+                                            <small class="text-danger" id="small-error">File Upload Jpg Format Maximum
+                                                Size 5 MB.</small>
+                                        </label>
+                                    </div>
+                                    <div class="mb-5">
+                                        <p class="required">Select Company Name</p>
+                                        <select id="company-name" class="multiselect-role-permission"
+                                            multiple="multiple" data-selected-text-format="count"
+                                            data-live-search="true">
+                                            <option>Consumer Goods Myanmar Limited</option>
+                                            <option>CGM Company Limited</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-5">
+                                        <p class="required">Select User Type</p>
+                                        <select value="View" id="user-type" class="multiselect-role-permission"
+                                            data-selected-text-format="count">
+                                            <option value="0">Admin</option>
+                                            <option value="0">User</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-5">
+                                        <p class="">Description</p>
+                                        <input class="dpmnt-name form-control bg-light" type="text"
+                                            placeholder="Enter Description">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+                                    <div class="mb-5">
+                                        <p class="required">User Name</p>
+                                        <input class="dpmnt-name form-control bg-light" type="text"
+                                            placeholder="Enter Username">
+                                    </div>
+                                    <div class="mb-5">
+                                        <p class="required">Select Department</p>
+                                        <select value="View" id="department" class="multiselect-role-permission"
+                                            required multiple="multiple" data-selected-text-format="count"
+                                            data-live-search="true">
+                                            <option>Account Department</option>
+                                            <option >Admin Department</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="mb-5">
+                                        <p class="required">Select Transaction</p>
+                                        <select value="View" id="transaction" class="multiselect-role-permission"
+                                            multiple="multiple" data-selected-text-format="count"
+                                            data-live-search="true">
+                                            <option>Dashboard</option>
+                                            <option>User Role Master</option>
+                                            <option>User Role Permission</option>
+                                            <option>Telecom Masters</option>
+                                            <option>Process</option>
+                                            <option>Report</option>
+                                            <option>Change Password</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="mb-5">
+                                        <p class="required">Mobile Number</p>
+                                        <input type="text" id="phone" class="dpmnt-name form-control bg-light"
+                                            placeholder="09XXXXXXX" required="required" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+                                    <div class="mb-5">
+                                        <p class="required">Password</p>
+                                        <input class="dpmnt-name form-control bg-light" type="text"
+                                            placeholder="Enter Password">
+                                    </div>
+                                    <div class="mb-5">
+                                        <p class="required">Select Designation</p>
+                                        <select value="View" id="designation" class="multiselect-role-permission"
+                                            multiple="multiple" data-selected-text-format="count"
+                                            data-live-search="true">
+                                            <option>Accountant</option>
+                                            <option>Manager</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="mb-5">
+                                        <p class="required">Select Role Permission</p>
+                                        <select id="role-permission" class="multiselect-role-permission"
+                                            multiple="multiple" data-selected-text-format="count"
+                                            data-live-search="true">
+                                            <optgroup label="Dashboard">
+                                                <option >View</option>
+                                                <option>View & Download</option>
+                                                <option>Create & Upload</option>
+                                                <option>Updated</option>
+                                            </optgroup>
+                                            <optgroup label="User Role Master">
+                                                <option>View</option>
+                                                <option>View & Download</option>
+                                                <option>Create & Upload</option>
+                                                <option>Updated</option>
+                                            </optgroup>
+                                            <optgroup label="User Role Permission">
+                                                <option>View</option>
+                                                <option>View & Download</option>
+                                                <option>Create & Upload</option>
+                                                <option>Updated</option>
+                                            </optgroup>
+                                            <optgroup label="Telecom Master">
+                                                <option>View</option>
+                                                <option>View & Download</option>
+                                                <option>Create & Upload</option>
+                                                <option>Updated</option>
+                                            </optgroup>
+                                            <optgroup label="Process">
+                                                <option>View</option>
+                                                <option>View & Download</option>
+                                                <option>Create & Upload</option>
+                                                <option>Updated</option>
+                                            </optgroup>
+                                            <optgroup label="Report">
+                                                <option>View</option>
+                                                <option>View & Download</option>
+                                                <option>Create & Upload</option>
+                                                <option>Updated</option>
+                                            </optgroup>
+                                            <optgroup label="Change Password">
+                                                <option>View</option>
+                                                <option>View & Download</option>
+                                                <option>Create & Upload</option>
+                                                <option>Updated</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-wrapper-footer">
+                    <div class="app-footer">
+                        <div class="app-footer__inner justify-content-center">
+                            <div class=" create-user pb-3">
+                                <button type="button" class="btn btn-danger reset-btn mr-3" data-dismiss="modal"><a
+                                        href="5.1.main_menu.html"
+                                        class="text-decoration-none text-white">CANCEL</a></button>
+                                <button type="button" id="submit" class="btn btn-success save-btn" data-toggle="modal"
+                                    data-target="#accCreateModal"><a
+                                        class="text-decoration-none text-white">SAVE</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--            *** Content End ***-->
+        </div>
+    </div>
+    <!--Create Acc Success Modal -->
+    <div class="modal fade accCreateModal" id="accCreateModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog  modal-dialog-centered   modal-lg" role="document">
+            <div class="modal-content deModalContent">
+                <div class="modal-body">
+                    <br><br>
+                    <div class="row">
+                        <img src="../assets/images/checked.png" class="rounded mx-auto d-block "
+                            style="width: 50px"><br>
+                    </div>
+                    <br>
+                    <div class="row ">
+                        <div class="col-12">
+                            <h4 style="text-align: center;">User Created Successfully!</h4>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal: logoutmodal-->
+    <div class="modal fade" id="logoutFormModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-notify modal-danger" role="document">
+            <!--Content-->
+            <div class="modal-content logoutModalContent text-center modal-success">
+                <!--Body-->
+                <div class="modal-body">
+                    <img src="../assets/images/Search.svg" width="10%" alt="">
+                    <br><br><br>
+                    <h4 style="font-weight: bold;">Do you want to logout?</h4>
+                    <br><br>
+                    <div class="d-flex justify-content-center">
+                        <a href="../1.Login_and_2.Forget/1.login.html"><button
+                                class="btn btn-success apply-btn mr-3">Yes</button></a>
+                        <button class="btn btn-danger ml-3 apply-btn" data-dismiss="modal">No</button>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+</body>
+
+<!--***** Scripts *****-->
+
+<!--*** Jquery **-->
+<script src="../assets/scripts/jquery.min.js"></script>
+<script src="../assets/scripts/popper.js"></script>
+<script src="../assets/scripts/moment.min.js"></script>
+
+<!--*** Bootstrap ***    -->
+<script src="../assets/vendor/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+
+<!--*** Multiselect ***-->
+<script src="../assets/vendor/multiselect/assets/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../assets/vendor/multiselect/js/jquery.multiselect.js" type="text/javascript"></script>
+<script src="../assets/vendor/multiselect/js/jquery.multiselect.filter.js" type="text/javascript"></script>
+
+<!--*** Data Table ***-->
+<script src="../assets/vendor/data_table/jquery.dataTables.min.js"></script>
+<script src="../assets/vendor/data_table/dataTables.bootstrap4.min.js"></script>
+
+<!--*** Calendar ***-->
+<script src="../assets/vendor/calendar/calentim.min.js"></script>
+
+<!--*** Intl' Phone ***-->
+<script src="../assets/vendor/intl_phonenumber/js/intlTelInput.js"></script>
+
+<!--*** Check all ***-->
+<!--    <script src="../assets/vendor/multiselect-checkall/bootstrap-multiselect.js"></script>-->
+
+<!--*** main JS ***-->
+<script src="../assets/scripts/main.js" type="text/javascript"></script>
+<script src="../assets/scripts/main-custom.js"></script>
+
+<script>
+    // *** Upload Photo ***
+    let fileInput = document.getElementById('file-upload');
+    let span = document.querySelector('small');
+
+    fileInput.addEventListener('change', () => {
+        let files = fileInput.files;
+
+        if (files.length > 0) {
+            if (files[0].size > 5 * 1048576) {
+                span.innerText = 'Maximum Upload File Size Limit: 5MB.';
+                fileInput.value = '';
+                return false;
+                return;
+            }
+        }
+
+        span.innerText = '';
+    });
+
+    $(function () {
+        $("#file-upload").change(function (event) {
+            let x = URL.createObjectURL(event.target.files[0]);
+            $("#uploaded-photo").attr("src", x);
+            $("#upload-lightbox").attr("href", x)
+            console.log(event);
+        })
+    })
+
+    // *** Upload Photo ***
+
+    // *** Intl' Phone ***
+
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+        allowDropdown: false,
+        // autoHideDialCode: false,
+        autoPlaceholder: "off",
+        // dropdownContainer: document.body,
+        // excludeCountries: ["us"],
+        // formatOnDisplay: false,
+        // geoIpLookup: function(callback) {
+        //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        //     var countryCode = (resp && resp.country) ? resp.country : "";
+        //     callback(countryCode);
+        //   });
+        // },
+        // hiddenInput: "full_number",
+        initialCountry: "mm",
+        // localizedCountries: { 'de': 'Deutschland' },
+        // nationalMode: false,
+        // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        // placeholderNumberType: "MOBILE",
+        // preferredCountries: ['cn', 'jp'],
+        separateDialCode: true,
+        utilsScript: "build/js/utils.js",
+    });
+    // *** Intl' Phone ***
+
+    // *** Create Acc Success ***
+    $(function () {
+
+        $(document).ready(function () {
+            $('#submit').on("click", function () {
+                console.log("hello")
+                setTimeout(function () {
+                    window.location.replace("5.1.main_menu.html");
+                }, 3000)
+            })
+        })
+
+        setTimeout(function () {
+            $('#accCreateModal').modal('hide');
+
+        }, 5000);
+
+    });
+
+
+    // ***  Multiselect ***
+    $("#department").multiselect().multiselectfilter({
+        label: false
+    });
+    $("#role-permission").multiselect().multiselectfilter({
+        label: false
+    });
+    $("#designation").multiselect().multiselectfilter({
+        label: false
+    });
+    $("#user-type").multiselect({
+        multiple: false,
+        header: false
+    });
+    $("#transaction").multiselect({
+        label: false
+    });
+    $("#company-name").multiselect({
+        label: false
+    });
+
+
+</script>
+
+<!--***** Scripts *****-->
+
+</html>

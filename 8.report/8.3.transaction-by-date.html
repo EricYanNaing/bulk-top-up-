@@ -1,0 +1,816 @@
+<!doctype html>
+<div class="loader-container" style="z-index: 2000">
+    <div class="lds-ripple">
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="en" http-equiv="Content-Language">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>BULK TOP UP</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"
+        name="viewport" />
+    <meta content="This is an example dashboard created using build-in elements and components." name="description">
+    <meta content="no" name="msapplication-tap-highlight">
+
+    <!--    *** Multiselect Css ***-->
+    <link href="../assets/vendor/multiselect/assets/jquery.multiselect.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/multiselect/assets/jquery.multiselect.filter.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/multiselect/assets/style.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/multiselect/assets/prettify.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/multiselect/assets/jquery-ui.css" rel="stylesheet" type="text/css">
+
+    <!--    *** Bootstrap ***-->
+    <link href="../assets/vendor/bootstrap-5.1.3-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+    <!--*** Check all ***-->
+    <!--    <link rel="stylesheet" href="../assets/vendor/multiselect-checkall/bootstrap-multiselect.css">-->
+
+    <!--    *** Calendar Css ***-->
+    <link rel="stylesheet" href="../assets/vendor/calendar/calentim.min.css">
+
+    <!--    *** Data Table ***-->
+    <link rel="stylesheet" href="../assets/vendor/data_table/data_table.css">
+
+    <!--*** 8.report -> style.css ***-->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .ui-widget {
+            font-size: 1em !important;
+        }
+
+        @media screen and (max-width: 1551px) {
+
+            .ui-state-default,
+            .ui-widget-content .ui-state-default,
+            .ui-widget-header .ui-state-default {
+                width: 87% !important;
+            }
+
+            #datetimepicker {
+                width: 87%;
+            }
+        }
+    </style>
+
+<body>
+
+    <!--                *** Scroll Bar *** -->
+    <div class="scrollbar-container"></div>
+    <!--        *** Scroll Bar ***-->
+
+
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+        <div class="app-header header-shadow">
+            <div class="app-header__logo">
+                <a href="../index.html" class="d-flex align-items-center text-decoration-none">
+                    <div class="logo-src"></div>
+                    <span class="fw-bolder logo-text text-white">BULK TOP UP</span>
+                </a>
+                <div class="header__pane ml-auto">
+                    <div>
+                        <button id="closebtn" class="hamburger close-sidebar-btn hamburger--elastic"
+                            data-class="closed-sidebar" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button class="hamburger hamburger--elastic mobile-toggle-nav" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="app-header__menu">
+                <span>
+                    <button class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav"
+                        type="button">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                    </button>
+                </span>
+            </div>
+            <div class="app-header__content">
+                <div class="app-header-left">
+                    <div class="search-wrapper">
+                        <div class="input-holder">
+                            <input class="search-input" placeholder="Type to search" type="text">
+                            <button class="search-icon"><span></span></button>
+                        </div>
+                        <button class="close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app-main">
+            <div class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="logo-src"></div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar"
+                                type="button">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button class="hamburger hamburger--elastic mobile-toggle-nav" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                        <button id="close-btn"
+                            class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav"
+                            type="button">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
+                    </span>
+                </div>
+                <div class="scrollbar-sidebar">
+                    <div class="app-sidebar__inner">
+                        <div class="user-info">
+                            <div class=" d-flex flex-column align-items-center pt-3">
+                                <img src="../assets/images/profile-pic.jpg" alt="" class="profile-pic">
+                                <a href="../11.Profile/11_profile.html"><p class="pt-2 text-white fw-bold">BULK TOP UP ADMIN</p></a>
+                                <p class="text-white fw-bold">Last Login</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="text-white">
+                                    <i class="fa fa-calendar-alt"></i>
+                                    <span>Wed, 01-Feb-2022</span>
+                                </div>
+                                <div class="text-white">
+                                    <i class="fa fa-clock"></i>
+                                    <span>04:50</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="vertical-nav-menu pt-3 text-white">
+                            <li class="py-1">
+                                <a href="../index.html">
+                                    <img src="../assets/images/icons/Dashboard.svg" alt="">
+                                    <span class="px-2">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">
+                                    <img src="../assets/images/icons/Master.svg" alt="">
+                                    <span class="px-2">User Role Master</span>
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li class="py-1">
+                                        <a href="../4.User_role_master/4.1_company.html">
+                                            <img src="../assets/images/icons/Company.svg" alt="">
+                                            <span class="px-2">Company</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../4.User_role_master/4.4_department.html">
+                                            <img src="../assets/images/icons/Department.svg" alt="">
+                                            <span class="px-2">Department</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../4.User_role_master/4.7_designation.html">
+                                            <img src="../assets/images/icons/Designation.svg" alt="">
+                                            <span class="px-2">Designation</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1">
+                                <a href="../5.user_role/5.1.main_menu.html">
+                                    <img src="../assets/images/icons/User%20Role%20Permission.svg" alt="">
+                                    <span class="px-2">User Role Permission</span>
+                                </a>
+                            </li>
+                            <li class="py-1 ">
+                                <a href="#" id="telecomsub">
+                                    <img src="../assets/images/icons/Telecom%20Master.svg" alt="">
+                                    <span class="px-2">Telecom Masters</span>
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li class="py-1">
+                                        <a href="../7.Telecom/7.1Telecom.html">
+                                            <img src="../assets/images/icons/Telecom.svg" alt="">
+                                            <span class="px-2">Telecom</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../7.Telecom/7.2TelecomService.html">
+                                            <img src="../assets/images/icons/Telecom%20Service%20Type.svg" alt="">
+                                            <span class="px-2">Telecom Service Type</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../7.Telecom/7.3ServiceConfiguration.html">
+                                            <img src="../assets/images/icons/Service%20Type%20Configuration.svg" alt="">
+                                            <span class="px-2">Service Type Configuration</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../7.Telecom/7.4TelecomPrice.html">
+                                            <img src="../assets/images/icons/Telecom%20Price.svg" alt="">
+                                            <span class="px-2">Telecom Price</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1 ">
+                                <a href="#">
+                                    <img src="../assets/images/icons/Process.svg" alt="">
+                                    <span class="px-2">Process</span>
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li class="py-1">
+                                        <a href="../6.Process/6.1a_single_topup_listing.html">
+                                            <img src="../assets/images/icons/Single%20Top%20Up.svg" alt="">
+                                            <span class="px-2">Single Top Up</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../6.Process/6.2_multiple_topup_listing.html">
+                                            <img src="../assets/images/icons/Multiple%20Top%20Up.svg" alt="">
+                                            <span class="px-2">Multiple Top Up</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../6.Process/6.4_bulk_top_up_listing.html">
+                                            <img src="../assets/images/icons/Bulk%20Top%20Up.svg" alt="">
+                                            <span class="px-2">Bulk Top Up</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1 mm-active">
+                                <a class="mm-active">
+                                    <img src="../assets/images/icons/Report.svg" alt="">
+                                    <span class="px-2">Report</span>
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li class="py-1">
+                                        <a href="8.1.report-details.html">
+                                            <img src="../assets/images/icons/Clipboard.svg" alt="">
+                                            <span class="px-2">Report Detail</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="8.3.transaction-by-date.html" class="mm-active">
+                                            <img src="../assets/images/icons/Transaction Detail By Date.svg" alt="">
+                                            <span class="px-2">Transaction Detail By Date</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1">
+                                <a href="../9.Change_pswrd/9.1_change_pswrd.html">
+                                    <img src="../assets/images/icons/Change%20Password.svg" alt="">
+                                    <span class="px-2">Change Password</span>
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#" aria-expanded="false" data-toggle="modal" data-target="#logoutFormModal">
+                                    <img src="../assets/images/icons/Logout.svg" alt="">
+                                    <span class="px-2">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--            *** Content Start ***-->
+
+            <div class="app-main__outer">
+                <div class="app-main__inner">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="fw-bold user-role-title">Transaction by date</h3>
+                    </div>
+
+                    <div class="row my-4">
+                        <div class="col-xl-4">
+                            <p class=" fw-bold ptxt">Transaction Type</p>
+                            <select id="transactionType" class="multiselect-role-permission"
+                                onchange="transactionType()" multiple="multiple" data-selected-text-format="count"
+                                data-live-search="true">
+                                <option>Bulk Top Up By Date</option>
+                                <option>Transaction By Date</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-4" id="operatorrow">
+                            <p class=" fw-bold ptxt">Operator</p>
+                            <select id="operator" class="multiselect-role-permission" multiple="multiple"
+                                onchange="btnAppear(); " data-selected-text-format="count" data-live-search="true">
+                                <option>MEC Tel</option>
+                                <option>MPT</option>
+                                <option>Mytel</option>
+                                <option>Ooredoo</option>
+                                <option>Telenor</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-4" id="processrow">
+                            <p class=" fw-bold ptxt">Process</p>
+                            <select id="process" class="multiselect-role-permission" multiple="multiple"
+                                onchange="btnAppear(); " data-selected-text-format="count" data-live-search="true">
+                                <option>Single Top Up</option>
+                                <option>Multiple Top Up</option>
+                                <option>Bulk Top Up</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-4 rDisable" id="operatorrow2">
+                            <p class=" fw-bold ptxt">Operator</p>
+                            <select id="operator2" class="multiselect-role-permission" multiple="multiple"
+                                onchange="btnAppear2(); " data-selected-text-format="count" data-live-search="true">
+                                <option>MEC Tel</option>
+                                <option>MPT</option>
+                                <option>Mytel</option>
+                                <option>Ooredoo</option>
+                                <option>Telenor</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-4 rDisable" id="processrow2">
+                            <p class=" fw-bold ptxt">Process</p>
+                            <select id="process2" class="multiselect-role-permission" multiple="multiple"
+                                onchange="btnAppear2(); " data-selected-text-format="count" data-live-search="true">
+                                <option>Single Top Up</option>
+                                <option>Multiple Top Up</option>
+                                <option>Bulk Top Up</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-xl-4" id="statusCol">
+                            <p class=" fw-bold ptxt">Status</p>
+                            <select id="status" class="multiselect-role-permission statusO" multiple="multiple"
+                                onchange="btnAppear(); " data-selected-text-format="count" data-live-search="true">
+                                <option>File Has Been Uploaded</option>
+                                <option>User Processed For Payment</option>
+                                <option>Payment Response Has Been Came - Success</option>
+                                <option>Payment Response Has Been Came - Fail</option>
+                                <option>Top Up Success</option>
+                                <option>Top Up Fail</option>
+                                <option>Top Up Partail Has Been Success</option>
+                                <option>No Records Found</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-4" id="datetime">
+                            <div class="date_time container mb-3 p-0">
+                                <p class="">Select Period Date</p>
+                                <input type="text" id="datetimepicker" onchange="btnAppear()"
+                                    class="form-control bg-light" value="">
+                                <i class="fa fa-calendar-alt calender-small"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 rDisable" id="datetime2">
+                            <div class="date_time container mb-3 p-0">
+                                <p class="">Select Period Date</p>
+                                <input type="text" id="datetimepicker2" onchange="btnAppear2()"
+                                    class="form-control bg-light" value="">
+                                <i class="fa fa-calendar-alt calender-small"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-4"></div>
+                    </div>
+
+
+                    <!-- submit btn for bulk top up  by date -->
+                    <div class="d-flex justify-content-center align-items-center my-5 mt-5 pt-5 rDisable "
+                        id="bulktopupbydateBtnRow">
+                        <button type="button" id="bulktopupbydateSubmit" onclick="bulktopupbydateSubmit()"
+                            class="btn btn-success save-btn"><a
+                                class="text-decoration-none text-white">SUBMIT</a></button>
+                    </div>
+
+                    <!--  bulk top up table  -->
+                    <div class="row rDisable mt-3" id="bulktopupByDateTableRow">
+                        <div class="d-flex justify-content-end align-items-end">
+                            <div>
+                                <a href="" data-bs-placement="bottom" data-toggle="tooltip" title="Download"><img
+                                        class="menu-icon" src="../assets/images/icons/excel%20download%20.svg"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="table-responsive">
+                                <table id="bulktopupByDateTable" class="table table-responsive text-nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Transaction Type</th>
+                                            <th scope="col">Telco Name</th>
+                                            <th scope="col">Proccess</th>
+                                            <th scope="col">File Name</th>
+                                            <th scope="col">OK$ Transaction ID</th>
+                                            <th scope="col">Bulk Top Reference No.</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Total Top Up Fail Request</th>
+                                            <th scope="col">Total Top Up Success Request</th>
+                                            <th scope="col">Total Top Up Request</th>
+                                            <th scope="col">Failure Price</th>
+                                            <th scope="col">Success Price</th>
+                                            <th scope="col">Debit OK$ Account Type</th>
+                                            <th scope="col">Debit Ok$ Number</th>
+                                            <th scope="col">Total Transaction Amount</th>
+                                            <th scope="col">Refund Transaction Reason</th>
+                                            <th scope="col">Refund OK$ Transaction ID</th>
+                                            <th scope="col">Refund Status</th>
+                                            <th scope="col">Created Date & Time</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Bulk Top Up By Date</td>
+                                            <td>MPT</td>
+                                            <td>Bulk Top Up</td>
+                                            <td>Bulk Top Up - 12.8.2021</td>
+                                            <td>1863010697</td>
+                                            <td>Bff-1863010 </td>
+                                            <td>Top Up Success</td>
+                                            <td>-</td>
+                                            <td>100,000</td>
+                                            <td>100,000</td>
+                                            <td>0</td>
+                                            <td>100,000</td>
+                                            <td>Personal</td>
+                                            <td>0959421008562</td>
+                                            <td>100,000</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>Fri, 12-March-2021 12:10:20</td>
+                                            <td>
+                                                <a href="8.4.viewtransactionbydetail.html">
+                                                    <img src="../assets/images/icons/View.svg" width="70%" alt="">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- submit btn for transaction  by date -->
+                    <div class="d-flex justify-content-center align-items-center my-5 mt-5 pt-5 rDisable "
+                        id="transactionBtnRow">
+                        <button type="button" id="oktransactionSubmit" onclick="transactionSubmit()"
+                            class="btn btn-success save-btn"><a
+                                class="text-decoration-none text-white">SUBMIT</a></button>
+                    </div>
+                    <!--  transaction table  -->
+                    <div class="row rDisable mt-3" id="transactionByDateTableRow">
+                        <div class="d-flex justify-content-end align-items-end">
+                            <div>
+                                <a href="" data-bs-placement="bottom" data-toggle="tooltip" title="Download"><img
+                                        class="menu-icon" src="../assets/images/icons/excel%20download%20.svg"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="table-responsive">
+                                <table id="transactionByDateTable" class="table table-responsive text-nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Transaction Type</th>
+                                            <th scope="col">Telco Name</th>
+                                            <th scope="col">File Name</th>
+                                            <th scope="col">OK$ Transaction ID</th>
+                                            <th scope="col">Total Top Up Request</th>
+                                            <th scope="col">Total Top Up Success Request</th>
+                                            <th scope="col">Total Top Up Fail Request</th>
+                                            <th scope="col">Top Up Status</th>
+                                            <th scope="col">Bulk Top Up Reference Number</th>
+                                            <th scope="col">Failure Price</th>
+                                            <th scope="col">Debit OK$ Account Type</th>
+                                            <th scope="col">Debit OK$ Number</th>
+                                            <th scope="col">Transaction Amount</th>
+                                            <th scope="col">Total Price</th>
+                                            <th scope="col">Refund Transaction Reason</th>
+                                            <th scope="col">Refund OK$ Transaction Transaction ID</th>
+                                            <th scope="col">Refund Status</th>
+                                            <th scope="col">Transaction Date</th>
+                                            <th scope="col">Created Date & Time</th>
+                                            <th scope="col">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Bulk Top Up By Date</td>
+                                            <td>MPT</td>
+                                            <td>Bulk Top Up</td>
+                                            <td>Bulk Top Up - 12.8.2021</td>
+                                            <td>1863010697</td>
+                                            <td>Bff-1863010 </td>
+                                            <td>Top Up Success</td>
+                                            <td>-</td>
+                                            <td>100,000</td>
+                                            <td>100,000</td>
+                                            <td>0</td>
+                                            <td>100,000</td>
+                                            <td>Personal</td>
+                                            <td>0959421008562</td>
+                                            <td>100,000</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>Fri, 12-March-2021 12:10:20</td>
+                                            <td>-
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="app-wrapper-footer">
+                    <div class="app-footer">
+                        <div class="app-footer__inner">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--            *** Content End ***-->
+        </div>
+    </div>
+    <!--Modal: logoutmodal-->
+    <div class="modal fade" id="logoutFormModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-notify modal-danger" role="document">
+            <!--Content-->
+            <div class="modal-content logoutModalContent text-center modal-success">
+                <!--Body-->
+                <div class="modal-body">
+                    <img src="../assets/images/Search.svg" width="10%" alt="">
+                    <br><br><br>
+                    <h4 style="font-weight: bold;">Do you want to logout?</h4>
+                    <br><br>
+                    <div class="d-flex justify-content-center">
+                        <a href="../1.Login_and_2.Forget/1.login.html"><button
+                                class="btn btn-success apply-btn mr-3">Yes</button></a>
+                        <button class="btn btn-danger ml-3 apply-btn" data-dismiss="modal">No</button>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+</body>
+
+<!--***** Scripts *****-->
+
+<!--*** Jquery **-->
+<script src="../assets/scripts/jquery.min.js"></script>
+<script src="../assets/scripts/popper.js"></script>
+<script src="../assets/scripts/moment.min.js"></script>
+
+<!--*** Bootstrap ***    -->
+<script src="../assets/vendor/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+
+<!--*** Multiselect ***-->
+<script src="../assets/vendor/multiselect/assets/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../assets/vendor/multiselect/js/jquery.multiselect.js" type="text/javascript"></script>
+<script src="../assets/vendor/multiselect/js/jquery.multiselect.filter.js" type="text/javascript"></script>
+
+<!--*** Data Table ***-->
+<script src="../assets/vendor/data_table/jquery.dataTables.min.js"></script>
+<script src="../assets/vendor/data_table/dataTables.bootstrap4.min.js"></script>
+
+<!--*** Calendar ***-->
+<script src="../assets/vendor/calendar/calentim.min.js"></script>
+
+<!--*** Check all ***-->
+<!--    <script src="../assets/vendor/multiselect-checkall/bootstrap-multiselect.js"></script>-->
+
+<!--*** main JS ***-->
+<script src="../assets/scripts/main.js" type="text/javascript"></script>
+<script src="../assets/scripts/main-custom.js"></script>
+
+<script>
+    $("#transactionType").multiselect({
+        multiple: false,
+        header: false
+    });
+
+    $("#operator").multiselect({
+        multiple: false,
+        header: false
+    });
+    $("#process").multiselect({
+        multiple: false,
+        header: false
+    });
+    $("#operator2").multiselect({
+        multiple: false,
+        header: false
+    });
+    $("#process2").multiselect({
+        multiple: false,
+        header: false
+    });
+    $("#status").multiselect({
+        multiple: false,
+        header: false,
+    });
+    $("#datetimepicker").calentim({
+        showFooter: false,
+        showTimePickers: false,
+        minDate: new Date(),
+        format: "ddd, DD-MMM-YYYY",
+        hourFormat: 24
+    });
+    $("#datetimepicker2").calentim({
+        showFooter: false,
+        showTimePickers: false,
+        minDate: new Date(),
+        format: "ddd, DD-MMM-YYYY",
+        hourFormat: 24
+    });
+
+    function transactionType() {
+        var processrow2 = document.getElementById('processrow2');
+        var operatorrow2 = document.getElementById('operatorrow2');
+        var processrow = document.getElementById('processrow');
+        var processrow = document.getElementById('operatorrow');
+        var transactionType = document.getElementById('transactionType');
+        var display_transactionType = transactionType.options[transactionType.selectedIndex].text;
+
+        var transactionTypeval = document.getElementById('transactionType').value;
+        var operator = document.getElementById('operator').value;
+        var process = document.getElementById('process').value;
+        var status = document.getElementById('status').value;
+        var transactionBtnRow = document.getElementById('transactionBtnRow');
+        var datetimepicker = document.getElementById('datetimepicker').value;
+        var bulktopupbydateBtnRow = document.getElementById('bulktopupbydateBtnRow');
+        var operator2 = document.getElementById('operator2').value;
+        var process2 = document.getElementById('process2').value;
+        var datetimepicker2 = document.getElementById('datetimepicker2').value;
+
+        if (display_transactionType == 'Transaction By Date') {
+
+            document.getElementById('processrow').classList.add('rDisable');
+            document.getElementById('operatorrow').classList.add('rDisable');
+            document.getElementById('datetime').classList.add('rDisable');
+
+            document.getElementById('processrow2').classList.remove('rDisable');
+            document.getElementById('operatorrow2').classList.remove('rDisable');
+            document.getElementById('datetime2').classList.remove('rDisable');
+
+            document.getElementById('statusCol').classList.add('rDisable');
+            document.getElementById('bulktopupByDateTableRow').classList.add('rDisable');
+            document.getElementById('bulktopupbydateBtnRow').classList.add('rDisable');
+            document.getElementById('transactionByDateTableRow').classList.add('rDisable');
+
+            if (transactionTypeval == 'Transaction By Date' && operator2 != '' && process2 != '' && datetimepicker2 !=
+                '') {
+                document.getElementById('bulktopupbydateBtnRow').classList.remove('rDisable');
+                transactionBtnRow.classList.remove('rDisable');
+                bulktopupbydateBtnRow.classList.add('rDisable');
+                document.getElementById('transactionByDateTableRow').classList.add('rDisable');
+            }
+
+        } else {
+            document.getElementById('processrow').classList.remove('rDisable');
+            document.getElementById('operatorrow').classList.remove('rDisable');
+            document.getElementById('datetime').classList.remove('rDisable');
+
+            document.getElementById('processrow2').classList.add('rDisable');
+            document.getElementById('operatorrow2').classList.add('rDisable');
+            document.getElementById('datetime2').classList.add('rDisable');
+
+            document.getElementById('statusCol').classList.remove('rDisable');
+            document.getElementById('transactionBtnRow').classList.add('rDisable');
+            document.getElementById('bulktopupByDateTableRow').classList.add('rDisable');
+            document.getElementById('transactionByDateTableRow').classList.add('rDisable');
+            if (transactionTypeval == 'Bulk Top Up By Date' && operator != '' && process != '' && datetimepicker !=
+                '' && status != '') {
+                document.getElementById('bulktopupbydateBtnRow').classList.remove('rDisable');
+                transactionBtnRow.classList.add('rDisable');
+                bulktopupbydateBtnRow.classList.remove('rDisable');
+                document.getElementById('transactionByDateTableRow').classList.add('rDisable');
+
+            }
+        }
+    }
+
+
+    function btnAppear() {
+        var transactionType = document.getElementById('transactionType').value;
+        var operator = document.getElementById('operator').value;
+        var process = document.getElementById('process').value;
+        var status = document.getElementById('status').value;
+        var transactionBtnRow = document.getElementById('transactionBtnRow');
+        var datetimepicker = document.getElementById('datetimepicker').value;
+        var bulktopupbydateBtnRow = document.getElementById('bulktopupbydateBtnRow');
+
+        if (transactionType == 'Bulk Top Up By Date' && operator != '' && process != '' && datetimepicker != '' &&
+            status != '') {
+            document.getElementById('bulktopupbydateBtnRow').classList.add('rDisable');
+            bulktopupbydateBtnRow.classList.remove('rDisable');
+            transactionBtnRow.classList.add('rDisable');
+            document.getElementById('transactionByDateTableRow').classList.add('rDisable');
+        }
+    }
+
+    function btnAppear2() {
+        var transactionType = document.getElementById('transactionType').value;
+        var operator2 = document.getElementById('operator2').value;
+        var process2 = document.getElementById('process2').value;
+        var datetimepicker2 = document.getElementById('datetimepicker2').value;
+        var transactionBtnRow = document.getElementById('transactionBtnRow');
+        var bulktopupbydateBtnRow = document.getElementById('bulktopupbydateBtnRow');
+
+        if (transactionType == 'Transaction By Date' && operator2 != '' && process2 != '' && datetimepicker2 != '') {
+            document.getElementById('bulktopupbydateBtnRow').classList.remove('rDisable');
+            transactionBtnRow.classList.remove('rDisable');
+            bulktopupbydateBtnRow.classList.add('rDisable');
+            document.getElementById('transactionByDateTableRow').classList.add('rDisable');
+        }
+    }
+
+    transactionSubmit = () => {
+        document.getElementById('transactionBtnRow').classList.add('rDisable');
+        document.getElementById('transactionByDateTableRow').classList.remove('rDisable');
+
+    }
+
+    function bulktopupbydateSubmit() {
+        document.getElementById('bulktopupbydateBtnRow').classList.add('rDisable');
+        document.getElementById('bulktopupByDateTableRow').classList.remove('rDisable');
+    }
+
+    (function ($) {
+
+        $.extend(true, $.fn.dataTable.defaults.oLanguage.oPaginate, {
+            sNext: '<i class="fa fa-chevron-right text-dark" style="font-size: 18px"></i>',
+            sPrevious: '<i class="fa fa-chevron-left text-dark" style="font-size: 18px"></i>'
+        });
+        $("#transactionByDateTable").DataTable({
+            "dom": '<"top">rt<"bottom"lip><"clear">',
+            "ordering": true,
+            "aoColumnDefs": [{
+                    "bSortable": true,
+                    "aTargets": [0, 1, 2, 3]
+                },
+                {
+                    "bSearchable": true,
+                    "aTargets": [0, 1, 2, 3]
+                }
+            ]
+        });
+        $("#bulktopupByDateTable").DataTable({
+            "dom": '<"top">rt<"bottom"lip><"clear">',
+            "ordering": true,
+            "aoColumnDefs": [{
+                    "bSortable": true,
+                    "aTargets": [0, 1, 2, 3]
+                },
+                {
+                    "bSearchable": true,
+                    "aTargets": [0, 1, 2, 3]
+                }
+            ]
+        });
+
+    })(jQuery);
+</script>
+
+<!--***** Scripts *****-->
+
+</html>

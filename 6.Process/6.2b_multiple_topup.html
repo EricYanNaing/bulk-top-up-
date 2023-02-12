@@ -1,0 +1,478 @@
+<!doctype html>
+<div class="loader-container" style="z-index: 2000">
+    <div class="lds-ripple"><div></div><div></div></div>
+</div>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="en" http-equiv="Content-Language">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>BULK TOP UP</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"
+        name="viewport" />
+    <meta content="This is an example dashboard created using build-in elements and components." name="description">
+    <meta content="no" name="msapplication-tap-highlight">
+
+    <!--    *** Multiselect Css ***-->
+    <link href="../assets/vendor/multiselect/assets/jquery.multiselect.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/multiselect/assets/jquery.multiselect.filter.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/multiselect/assets/style.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/multiselect/assets/prettify.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/multiselect/assets/jquery-ui.css" rel="stylesheet" type="text/css">
+
+    <!--    *** Bootstrap ***-->
+    <link href="../assets/vendor/bootstrap-5.1.3-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+    <!--*** Check all ***-->
+    <!--    <link rel="stylesheet" href="../assets/vendor/multiselect-checkall/bootstrap-multiselect.css">-->
+
+    <!--    *** Calendar Css ***-->
+    <link rel="stylesheet" href="../assets/vendor/calendar/calentim.min.css">
+
+    <!--    *** Data Table ***-->
+    <link rel="stylesheet" href="../assets/vendor/data_table/data_table.css">
+
+    <!--*** 4.user role css ***-->
+    <link rel="stylesheet" href="css/style.css">
+
+<body>
+
+    <!--                *** Scroll Bar *** -->
+    <div class="scrollbar-container"></div>
+    <!--        *** Scroll Bar ***-->
+
+
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+        <div class="app-header header-shadow">
+            <div class="app-header__logo">
+                <a href="../index.html" class="d-flex align-items-center text-decoration-none">
+                    <div class="logo-src"></div>
+                    <span class="fw-bolder logo-text text-white">BULK TOP UP</span>
+                </a>
+                <div class="header__pane ml-auto">
+                    <div>
+                        <button id="closebtn" class="hamburger close-sidebar-btn hamburger--elastic"
+                            data-class="closed-sidebar" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button class="hamburger hamburger--elastic mobile-toggle-nav" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="app-main">
+            <div class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="logo-src"></div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar"
+                                type="button">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button class="hamburger hamburger--elastic mobile-toggle-nav" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                        <button id="close-btn"
+                            class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav"
+                            type="button">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
+                    </span>
+                </div>
+                <div class="scrollbar-sidebar">
+                    <div class="app-sidebar__inner">
+                        <div class="user-info">
+                            <div class=" d-flex flex-column align-items-center pt-3">
+                                <img src="../assets/images/profile-pic.jpg" alt="" class="profile-pic">
+                                <a href="../11.Profile/11_profile.html"><p class="pt-2 text-white fw-bold">BULK TOP UP ADMIN</p></a>
+                                <p class="text-white fw-bold">Last Login</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="text-white">
+                                    <i class="fa fa-calendar-alt"></i>
+                                    <span>Wed, 01-Feb-2022</span>
+                                </div>
+                                <div class="text-white">
+                                    <i class="fa fa-clock"></i>
+                                    <span>04:50</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="vertical-nav-menu pt-3 text-white">
+                            <li class="py-1">
+                                <a href="../index.html">
+                                    <img src="../assets/images/icons/Dashboard.svg" alt="">
+                                    <span class="px-2">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#">
+                                    <img src="../assets/images/icons/Master.svg" alt="">
+                                    <span class="px-2">User Role Master</span>
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li class="py-1">
+                                        <a href="../4.User_role_master/4.1_company.html">
+                                            <img src="../assets/images/icons/Company.svg" alt="">
+                                            <span class="px-2">Company</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../4.User_role_master/4.4_department.html">
+                                            <img src="../assets/images/icons/Department.svg" alt="">
+                                            <span class="px-2">Department</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../4.User_role_master/4.7_designation.html">
+                                            <img src="../assets/images/icons/Designation.svg" alt="">
+                                            <span class="px-2">Designation</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1">
+                                <a href="../5.user_role/5.1.main_menu.html">
+                                    <img src="../assets/images/icons/User%20Role%20Permission.svg" alt="">
+                                    <span class="px-2">User Role Permission</span>
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#" class=""  id="telecomsub">
+                                    <img src="../assets/images/icons/Telecom%20Master.svg" alt="">
+                                    <span class="px-2">Telecom Masters</span>
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li class="py-1">
+                                        <a href="../7.Telecom/7.1Telecom.html" class="" >
+                                            <img src="../assets/images/icons/Telecom.svg" alt="">
+                                            <span class="px-2">Telecom</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../7.Telecom/7.2TelecomService.html">
+                                            <img src="../assets/images/icons/Telecom%20Service%20Type.svg" alt="">
+                                            <span class="px-2">Telecom Service Type</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../7.Telecom/7.3ServiceConfiguration.html">
+                                            <img src="../assets/images/icons/Service%20Type%20Configuration.svg" alt="">
+                                            <span class="px-2">Service Type Configuration</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../7.Telecom/7.4TelecomPrice.html">
+                                            <img src="../assets/images/icons/Telecom%20Price.svg" alt="">
+                                            <span class="px-2">Telecom Price</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1 mm-active">
+                                <a href="#">
+                                    <img src="../assets/images/icons/Process.svg" alt="">
+                                    <span class="px-2">Process</span>
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li class="py-1">
+                                        <a href="6.1a_single_topup_listing.html">
+                                            <img src="../assets/images/icons/Single%20Top%20Up.svg" alt="">
+                                            <span class="px-2">Single Top Up</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="6.2_multiple_topup_listing.html" class="mm-active">
+                                            <img src="../assets/images/icons/Multiple%20Top%20Up.svg" alt="">
+                                            <span class="px-2">Multiple Top Up</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="6.4_bulk_top_up_listing.html">
+                                            <img src="../assets/images/icons/Bulk%20Top%20Up.svg" alt="">
+                                            <span class="px-2">Bulk Top Up</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1 ">
+                                <a class="">
+                                    <img src="../assets/images/icons/Report.svg" alt="">
+                                    <span class="px-2">Report</span>
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li class="py-1">
+                                        <a href="../8.report/8.1.report-details.html" class="">
+                                            <img src="../assets/images/icons/Clipboard.svg" alt="">
+                                            <span class="px-2">Report Detail</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="../8.report/8.3.transaction-by-date.html" >
+                                            <img src="../assets/images/icons/Transaction Detail By Date.svg" alt="">
+                                            <span class="px-2">Transaction Detail By Date</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1">
+                                <a href="../9.Change_pswrd/9.1_change_pswrd.html">
+                                    <img src="../assets/images/icons/Change%20Password.svg" alt="">
+                                    <span class="px-2">Change Password</span>
+                                </a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#" aria-expanded="false" data-toggle="modal" data-target="#logoutFormModal">
+                                    <img src="../assets/images/icons/Logout.svg" alt="">
+                                    <span class="px-2">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--            *** Content Start ***-->
+
+            <div class="app-main__outer">
+                <div class="app-main__inner">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <h3 class="fw-bold user-role-title">Add Multiple Top Up Details</h3>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-12 d-block d-xl-flex">
+                            <div class="col-12 col-md-12 col-xl-4">
+                                <div class="mb-5">
+                                    <h5>Select Telco Name</h5>
+                                    <select id="operator-name" class="multiselect-role-permission" multiple="multiple"
+                                        data-selected-text-format="count" data-live-search="true">
+                                        <option>Mec Tel</option>
+                                        <option>MPT</option>
+                                        <option>Mytel</option>
+                                        <option>Ooredoo</option>
+                                        <option>Telenor</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-xl-4">
+                                <div class="mb-5 select-disable" id="selectBox">
+                                    <h5 class="">Select Service Type</h5>
+                                    <select id="multiple-service-type" class="multiselect-role-permission"
+                                        multiple="multiple" data-selected-text-format="count" data-live-search="true"
+                                        onchange="multipleTopUp()">
+                                        <option>Data Plan</option>
+                                        <option>Special Offer</option>
+                                        <option>Top Up</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+
+                        <!--                    *** Data-Plan is selected ***-->
+                        <div class="d-block justify-content-between align-items-center d-md-flex">
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-4 d-none" id="dataplan-upload">
+                                <div class="mb-5">
+                                    <h5>Upload File</h5>
+                                    <input id="dataplan-file-upload" class="form-control bg-light" type="file"
+                                        accept=".xlsx, .xls, .csv" />
+                                    <label for="dataplan-file-upload" class="custom-file-upload">
+                                        <img class="upload-photo-logo"
+                                            src="../assets/images/attach-paperclip-symbol.png" alt="">
+                                        <span class="text-danger require">Upload Allow Different Amount</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-4 d-none" id="dataplan-download-format">
+                                <div class="mb-5">
+                                    <button class="btn btn-secondary"><i class="fa fa-download px-1"></i>Download
+                                        Format</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--                    *** Special-Offer-Plan is selected ***-->
+                        <div class="d-block justify-content-between align-items-center d-md-flex">
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-4 d-none" id="specialoffer-upload">
+                                <div class="mb-5">
+                                    <h5>Upload File</h5>
+                                    <input id="specialoffer-file-upload" class="form-control bg-light" type="file"
+                                        accept=".xlsx, .xls, .csv" />
+                                    <label for="specialoffer-file-upload" class="custom-file-upload">
+                                        <img class="upload-photo-logo"
+                                            src="../assets/images/attach-paperclip-symbol.png" alt="">
+                                        <span class="text-danger require">Upload Allow Different Amount</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-4 d-none" id="specialoffer-download-format">
+                                <div class="mb-5">
+                                    <button class="btn btn-secondary"><i class="fa fa-download px-1"></i>Download
+                                        Format</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--                    *** TopUp-Plan is selected ***-->
+                        <div class="d-block justify-content-between align-items-center d-md-flex">
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-4 d-none" id="topup-upload">
+                                <div class="mb-5">
+                                    <h5>Upload File</h5>
+                                    <input id="topup-file-upload" class="form-control bg-light" type="file"
+                                        accept=".xlsx, .xls, .csv" />
+                                    <label for="topup-file-upload" class="custom-file-upload">
+                                        <img class="upload-photo-logo"
+                                            src="../assets/images/attach-paperclip-symbol.png" alt="">
+                                        <span class="text-danger require">Upload Allow Different Amount</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-4 d-none" id="topup-download-format">
+                                <div class="mb-5">
+                                    <button class="btn btn-secondary"><i class="fa fa-download px-1"></i>Download
+                                        Format</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-wrapper-footer pb-3">
+                    <div class="app-footer d-flex justify-content-center align-items-center">
+                        <button id="topup-submit-btn" class="btn btn-success apply-btn d-none"><a
+                                href="6.2c_topup_invalid.html">Submit</a></button>
+                        <button id="dataplan-submit-btn" class="btn btn-success apply-btn d-none"><a
+                                href="6.2a_dataplan_invalid.html">Submit</a></button>
+                        <button id="specialoffer-submit-btn" class="btn btn-success apply-btn d-none"><a
+                                href="6.2b_special_offer_invalid.html">Submit</a></button>
+                    </div>
+                </div>
+            </div>
+            <!--            *** Content End ***-->
+        </div>
+    </div>
+    <!--Modal: FileNameError-->
+    <div class="modal fade" id="fileNameError" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-notify modal-danger" role="document">
+            <!--Content-->
+            <div class="modal-content logoutModalContent text-center modal-success">
+                <!--Body-->
+                <div class="modal-body">
+                    <img src="../assets/images/icons/Fail.svg" width="8%" alt="">
+                    <br><br><br>
+                    <h4 style="font-weight: bold;">File Name Already Exist</h4>
+                    <br>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!--Modal: logoutmodal-->
+    <div class="modal fade" id="logoutFormModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-notify modal-danger" role="document">
+            <!--Content-->
+            <div class="modal-content logoutModalContent text-center modal-success">
+                <!--Body-->
+                <div class="modal-body">
+                    <img src="../assets/images/Search.svg" width="10%" alt="">
+                    <br><br><br>
+                    <h4 style="font-weight: bold;">Do you want to logout?</h4>
+                    <br><br>
+                    <div class="d-flex justify-content-center">
+                        <a href="../1.Login_and_2.Forget/1.login.html"><button
+                                class="btn btn-success apply-btn mr-3">Yes</button></a>
+                        <button class="btn btn-danger ml-3 apply-btn" data-dismiss="modal">No</button>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+</body>
+
+<!--***** Scripts *****-->
+
+<!--*** Jquery **-->
+<script src="../assets/scripts/jquery.min.js"></script>
+<script src="../assets/scripts/popper.js"></script>
+<script src="../assets/scripts/moment.min.js"></script>
+
+<!--*** Bootstrap ***    -->
+<script src="../assets/vendor/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+
+<!--*** Multiselect ***-->
+<script src="../assets/vendor/multiselect/assets/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../assets/vendor/multiselect/js/jquery.multiselect.js" type="text/javascript"></script>
+<script src="../assets/vendor/multiselect/js/jquery.multiselect.filter.js" type="text/javascript"></script>
+
+<!--*** Data Table ***-->
+<script src="../assets/vendor/data_table/jquery.dataTables.min.js"></script>
+<script src="../assets/vendor/data_table/dataTables.bootstrap4.min.js"></script>
+
+<!--*** Calendar ***-->
+<script src="../assets/vendor/calendar/calentim.min.js"></script>
+
+<!--*** Check all ***-->
+<!--    <script src="../assets/vendor/multiselect-checkall/bootstrap-multiselect.js"></script>-->
+
+<!--*** main JS ***-->
+<script src="js/6_table_popup.js"></script>
+<script src="../assets/scripts/main.js" type="text/javascript"></script>
+<script src="../assets/scripts/main-custom.js"></script>
+
+<script>
+    $("#operator-name").multiselect({
+        header: false,
+        multiple: false,
+        label: false,
+        noneSelectedText: 'None Selected'
+    });
+    $("#multiple-service-type").multiselect({
+        multiple: false,
+        header: false
+    });
+    $("#example").multiselect({
+        multiple: false,
+        header: false
+    });
+</script>
+
+<!--***** Scripts *****-->
+
+</html>
